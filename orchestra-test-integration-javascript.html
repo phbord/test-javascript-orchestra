@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test intégration JavaScript</title>
+    <style>
+      body { font: 16px Arial, sans-serif; margin: 0; padding: 0; }
+     .header { margin: 0 15px; }
+     .title { font-size: 24px; margin: 15px 0; }
+     .product-info-list { padding: 0; list-style: none; }
+     .product-info-item { margin: 8px 0; display: flex; justify-content: space-between; }
+     .product-info-price { background-color: #000; color: #fff; margin: 5px -15px 0; padding: 15px; }
+     .main { background-color: #8e8e8e; color: #fff; height: 500px; display: flex; justify-content: center; align-items: center; }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="title">Au Coeur du village *****</h1>
+      <ul class="product-info-list">
+        <li class="product-info-item">
+          <strong>Date de départ</strong>
+          <span>Dimanche 8 janvier 2023</span>
+        </li>
+        <li class="product-info-item">
+          <strong>Date de retour</strong>
+          <span>Dimanche 15 janvier 2023</span>
+        </li>
+        <li class="product-info-item">
+          <strong>Durée</strong>
+          <span>8 jours / 7 nuits</span>
+        </li>
+        <li class="product-info-item">
+          <strong>Ville de départ</strong>
+          <span>Paris</span>
+        </li>
+        <li class="product-info-item">
+          <strong>Voyageur</strong>
+          <span>2 adultes, 1 enfant</span>
+        </li>
+      </ul>
+      <div class="product-info-price">
+        Montant de la transaction <strong>789,99 €</strong>
+      </div>
+    </header>
+    <main class="main">
+      <div>BLOC TOUJOURS VISIBLE <br> SANS SCROLL</div>
+    </main>
+    <script>
+      /**
+       * ----------------------------
+       * --------- README -----------
+       * ----------------------------
+       *
+       * Bonjour,
+       *
+       * Le test consiste à ajouter un javascript pour adapter le contenu de la page en fonction de la taille d'affichage des mobiles.
+       * Compatible pour les mobiles iPhone SE, 8 et 12 Pro (mode portrait uniquement). Utiliser l'émulateur de Chrome pour l'affichage sur mobiles.
+       * La fonctionnalité doit être activée lors du chargement de la page en fonction du mobile sélectionné.
+       *
+       * Attention : il ne faut pas utiliser les styles ou l'HTML pour le test, juste en javascript.
+       *
+       * 1. Bloc visible
+       * Il faut que le bloc dans la balise <main> reste toujours visible, sans avoir besoin de scroller dans la page quel que soit la version du mobile.
+       * La taille minimum de celui-ci est de 500px défini dans le style.
+       *
+       * Pour il arriver, il faut que vous supprimer du DOM les éléments dans la liste "product-info-list" dans l'ordre inverse d'affichage (Voyageur, Ville de départ, ...)
+       * et uniquement ceux nécessaire à l'affichage du bloc <main> et sans scroller dans la page.
+       *
+       * 2. Bloc élargi
+       * Il faut que le bloc dans la balise <main> prenne le reste de l'espace disponible (hauteur). Pas de marge blanche en bas du bloc.
+       *
+       * Bon courage,
+       * L'équipe Orchestra
+       *
+       */
+
+      
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
