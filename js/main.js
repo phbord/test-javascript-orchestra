@@ -23,6 +23,10 @@ function __reduceListHeight(WindowHeight, HeaderHeight, MainHeight) {
   });
 }
 
+function __removeList() {
+  $('.product-info-list').remove();
+}
+
 function initCss() {
   $('html').css("height", "100%");
   $('body').css({width: "100%", height: "100%", display: "inline-block"});
@@ -31,16 +35,22 @@ function initCss() {
 
 function loadNewHeight() {
   const WindowHeight = $(window).height();
-  const HeaderHeight = $('.header').outerHeight();
+  const HeaderHeight = $('.header').outerHeight(true);
   const MainHeight = $('.main').height();
   const CalculatedWindowHeight = HeaderHeight + MainHeight;
+  const TitleHeight = $('.title').outerHeight(true);
+  const AmountHeight = $('.product-info-price').outerHeight(true);
+  const DifferenceHeight = WindowHeight - (TitleHeight + AmountHeight);
 
-  if (WindowHeight > CalculatedWindowHeight) {
-    console.log("---> IF");
+  if (WindowHeight < MainHeight) {
+    // CAS mode paysage
+    __removeList();
+    $('.main').height(DifferenceHeight);
+  }
+  else if (WindowHeight > CalculatedWindowHeight) {
     __expandMainHeight(WindowHeight, HeaderHeight, MainHeight);
   }
   else if (WindowHeight < CalculatedWindowHeight) {
-    console.log("ELSE IF");
     __reduceListHeight(WindowHeight, HeaderHeight, MainHeight);
   }
 }
